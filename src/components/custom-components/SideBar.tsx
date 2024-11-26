@@ -43,7 +43,7 @@ const SideMenuStaticData = [
 
 const SideBar = () => {
   return (
-    <div className="w-[213px] h-full forground flex justify-center py-4 ">
+    <div className="w-[213px]  h-full forground flex justify-center py-4 ">
       <div className="flex flex-col gap-4">
         <div className="my-6 flex items-center gap-2">
           <Image src={LogoIcon} width={30} height={40} alt="smsIcon" />

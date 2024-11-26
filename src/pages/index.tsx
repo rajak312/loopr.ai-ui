@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div className="p-10 space-y-6">
       <StatsCard />
-      <div className="flex justify-between ">
+      <div className="grid grid-cols-1 md:flex md:flex-row justify-between gap-4 ">
         <OverViewChart />
         <RecentTransactionCard />
       </div>

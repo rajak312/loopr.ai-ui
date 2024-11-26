@@ -24,7 +24,7 @@ import { Badge } from "@/components/ui/badge";
 const TransactionTable = () => {
   return (
     <div>
-      <Card className="card border-none">
+      <Card className="card border-none w-full min-w-[315px] overflow-scroll">
         <CardHeader className="p-0 ">
           <div className="flex items-center justify-between">
             <CardTitle className="text-2xl">Transactions</CardTitle>
@@ -48,23 +48,33 @@ const TransactionTable = () => {
             <TableCaption>A list of your recent invoices.</TableCaption>
             <TableHeader className="card">
               <TableRow className="w-full ">
-                <TableHead className="max-w-[200px]">Name</TableHead>
-                <TableHead className="max-w-[100px]">Date</TableHead>
-                <TableHead className="max-w-[100px]">Amount</TableHead>
-                <TableHead className="max-w-[100px]">Status</TableHead>
+                <TableHead className="min-w-[200px] max-w-[200px]">
+                  Name
+                </TableHead>
+                <TableHead className="min-w-[100px] max-w-[100px]">
+                  Date
+                </TableHead>
+                <TableHead className="min-w-[100px] max-w-[100px]">
+                  Amount
+                </TableHead>
+                <TableHead className="min-w-[100px] max-w-[100px]">
+                  Status
+                </TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
               <TableRow>
-                <TableCell className="max-w-[200px]  flex items-center gap-2">
+                <TableCell className="min-w-[200px] max-w-[200px]  flex items-center gap-2">
                   <Image src={UserIcon} width={50} height={50} alt="smsIcon" />
                   <h1>John Deo</h1>
                 </TableCell>
-                <TableCell className="max-w-[100px]">Sat,20 Apr 2020</TableCell>
-                <TableCell className="max-w-[100px] text-green-500 font-semibold">
+                <TableCell className="min-w-[100px] max-w-[100px]">
+                  Sat,20 Apr 2020
+                </TableCell>
+                <TableCell className="min-w-[100px] max-w-[100px] text-green-500 font-semibold">
                   $26,335
                 </TableCell>
-                <TableCell className="max-w-[100px]">
+                <TableCell className="min-w-[100px] max-w-[100px]">
                   <Badge className="bg-green-600 text-gray-700">
                     completed
                   </Badge>
