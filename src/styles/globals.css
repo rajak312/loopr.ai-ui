@@ -2,10 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --card-bg-color: #1a1c22;
+  --main-bg-color: #282c35;
+  --text-color: #a9a9a9;
+}
+
 * {
   padding: 0%;
   box-sizing: border-box;
   margin: 0%;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  font-family: Arial, sans-serif;
+}
+.backround {
+  background-color: var(--card-bg-color);
+}
+.forground {
+  background-color: var(--card-bg-color);
+  color: var(--text-color);
+}
+
+.card {
+  background-color: var(--card-bg-color);
+  border-radius: 8px;
+  padding: 20px;
+  color: white;
 }
 
 @layer base {
