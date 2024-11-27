@@ -1,25 +1,28 @@
 import Image from "next/image";
 import React from "react";
-import smsIcon from "@/assets/sms.svg";
+import Wallet from "@/assets/wallet.svg";
+import card from "@/assets/card.svg";
+import dollar from "@/assets/dollar-circle.svg";
+import wallet from "@/assets/wallet-3.svg";
 
 const StatsStaticData = [
   {
-    icon: smsIcon,
+    icon: wallet,
     stats_name: "Balance",
     amount: "43,210",
   },
   {
-    icon: smsIcon,
+    icon: Wallet,
     stats_name: "Revenu",
     amount: "41,190",
   },
   {
-    icon: smsIcon,
+    icon: card,
     stats_name: "Expenses",
     amount: "43,210",
   },
   {
-    icon: smsIcon,
+    icon: dollar,
     stats_name: "Savings",
     amount: "35,210",
   },
@@ -31,7 +34,8 @@ const StatsCard = () => {
       {StatsStaticData.map((item, idx) => (
         <div
           key={idx}
-          className="w-full  min-w-[214.82px]  h-[95.75px] card flex items-center justify-between">
+          className="w-full  min-w-[214.82px]  h-[95.75px] card flex items-center justify-between"
+        >
           <div className="flex justify-center items-center rounded-lg h-14 w-14 bg-[#282C35]">
             <Image src={item.icon} width={30} height={40} alt="smsIcon" />
           </div>

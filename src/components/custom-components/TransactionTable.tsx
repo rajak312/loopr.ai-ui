@@ -3,14 +3,12 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
@@ -20,6 +18,7 @@ import UserIcon from "@/assets/user.svg";
 import Image from "next/image";
 import BellIcon from "@/assets/bell.svg";
 import { Badge } from "@/components/ui/badge";
+import SearchIcon from "@/assets/search-normal.svg";
 
 const TransactionTable = () => {
   return (
@@ -34,7 +33,7 @@ const TransactionTable = () => {
                   type="text"
                   className="bg-transparent  focus:outline-none border-none"
                 />
-                <Image src={BellIcon} width={25} height={25} alt="smsIcon" />
+                <Image src={SearchIcon} width={25} height={25} alt="smsIcon" />
               </div>
             </div>
             <CardDescription className="flex items-center gap-4">
@@ -43,11 +42,10 @@ const TransactionTable = () => {
             </CardDescription>
           </div>
         </CardHeader>
-        <CardContent>
+        <CardContent className="mt-6">
           <Table>
-            <TableCaption>A list of your recent invoices.</TableCaption>
-            <TableHeader className="card">
-              <TableRow className="w-full ">
+            <TableHeader className="card ">
+              <TableRow className="w-full border-none bg-[#282c35] hover:bg-[#282c35] rounded-xl ">
                 <TableHead className="min-w-[200px] max-w-[200px]">
                   Name
                 </TableHead>
@@ -63,7 +61,7 @@ const TransactionTable = () => {
               </TableRow>
             </TableHeader>
             <TableBody>
-              <TableRow>
+              <TableRow className="hover:bg-transparent">
                 <TableCell className="min-w-[200px] max-w-[200px]  flex items-center gap-2">
                   <Image src={UserIcon} width={50} height={50} alt="smsIcon" />
                   <h1>John Deo</h1>
@@ -71,11 +69,11 @@ const TransactionTable = () => {
                 <TableCell className="min-w-[100px] max-w-[100px]">
                   Sat,20 Apr 2020
                 </TableCell>
-                <TableCell className="min-w-[100px] max-w-[100px] text-green-500 font-semibold">
+                <TableCell className="min-w-[100px] max-w-[100px] text-[#1FCB4F] font-semibold">
                   $26,335
                 </TableCell>
                 <TableCell className="min-w-[100px] max-w-[100px]">
-                  <Badge className="bg-green-600 text-gray-700">
+                  <Badge className="bg-[#1FCB4F] hover:bg-[#1FCB4F] text-gray-700">
                     completed
                   </Badge>
                 </TableCell>
@@ -83,9 +81,6 @@ const TransactionTable = () => {
             </TableBody>
           </Table>
         </CardContent>
-        <CardFooter>
-          <p>Card Footer</p>
-        </CardFooter>
       </Card>
     </div>
   );

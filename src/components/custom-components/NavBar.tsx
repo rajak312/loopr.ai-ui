@@ -1,5 +1,6 @@
 import React from "react";
 import UserIcon from "@/assets/user.svg";
+import SearchIcon from "@/assets/search-normal.svg";
 import BellIcon from "@/assets/bell.svg";
 import Image from "next/image";
 import { ChevronLeft } from "lucide-react";
@@ -15,7 +16,7 @@ import SideBar from "./SideBar";
 
 const NavBar = () => {
   return (
-    <div className=" h-[75px] flex items-center justify-between px-4 forground">
+    <div className=" h-[75px] flex items-center justify-between px-4 forground ">
       <div className="flex items-center gap-2">
         <div className="sm:hidden">
           <Sheet>
@@ -24,7 +25,8 @@ const NavBar = () => {
             </SheetTrigger>
             <SheetContent
               className="w-max p-0 bg-transparent m-0 border-none"
-              side="left">
+              side="left"
+            >
               <SheetHeader>
                 <SheetTitle></SheetTitle>
                 <SheetDescription>
@@ -43,7 +45,7 @@ const NavBar = () => {
             type="text"
             className="bg-transparent  focus:outline-none border-none"
           />
-          <Image src={BellIcon} width={25} height={25} alt="smsIcon" />
+          <Image src={SearchIcon} width={25} height={25} alt="smsIcon" />
         </div>
         <div className="hidden sm:block">
           <Image src={BellIcon} width={30} height={40} alt="smsIcon" />

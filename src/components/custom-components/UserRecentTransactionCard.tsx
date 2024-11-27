@@ -4,7 +4,7 @@ import UserIcon from "@/assets/user.svg";
 
 const UserRecentTransactionCard = () => {
   return (
-    <div className="flex items-center justify-between">
+    <div className="flex items-center justify-between border-b p-2 ">
       <div className="flex items-center gap-2">
         <div>
           <Image src={UserIcon} width={50} height={50} alt="smsIcon" />
@@ -15,7 +15,7 @@ const UserRecentTransactionCard = () => {
         </div>
       </div>
       <div>
-        <h1 className="font-bold text-green-900">+554.09</h1>
+        <h1 className="font-bold text-[#1FCB4F]">+554.09</h1>
       </div>
     </div>
   );
